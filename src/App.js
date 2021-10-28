@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import {useEffect, useState} from "react";
+import {TodoCreator} from "./TodoCreator";
+import {Items} from "./Items";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:3001/api/items")
+            .then((response) => response.json())
+            .then((items) => setItems(items));
+    });
+
+    return (
+        <div className="App">
+            Todoer
+
+            <TodoCreator />
+
+            <Items />
+
+        </div>
+    );
 }
 
 export default App;
