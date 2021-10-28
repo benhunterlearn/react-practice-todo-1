@@ -1,3 +1,11 @@
+import {Item} from "./Item";
+
 export function Items() {
-    return null;
+    return (
+        <ul>
+            Items
+            <Item />
+            <Item />
+        </ul>
+    );
 }
