@@ -14,6 +14,8 @@ export function TodoCreator(props) {
         if (newTodoText.length > 0) {
             props.handleAddTodo(newTodoText);
             setNewTodoText('');
+
+            // either set the input text box 'value' to newTodoText or use the ref
             // textInputRef.current.value = '';
         }
     }
