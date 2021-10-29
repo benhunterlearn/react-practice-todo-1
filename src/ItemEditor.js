@@ -7,13 +7,18 @@ export function ItemEditor(props) {
         setText(newText);
     }
 
+    const handleSaveText = (event) => {
+        event.preventDefault();
+        props.saveText(text);
+    }
+
     return (
-        <>
+        <form onSubmit={(event) => handleSaveText(event)}>
             <input type="text"
                    value={text}
                    onChange={(e) => updateText(e.target.value)}
             />
-            <button onClick={() => props.saveText(text)}>Save</button>
-        </>
+            <button type="submit">Save</button>
+        </form>
     );
 }

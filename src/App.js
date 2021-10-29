@@ -3,6 +3,9 @@ import {useEffect, useState} from "react";
 import {TodoCreator} from "./TodoCreator";
 import {Items} from "./Items";
 
+// const apiUrl = "http://localhost:3001/api";
+const apiUrl = "http://localhost:8080/api";
+
 function App() {
     const [items, setItems] = useState([]);
 
@@ -12,13 +15,13 @@ function App() {
 
     function loadItems() {
         // Update items in state to display the new item
-        fetch("http://localhost:3001/api/items")
+        fetch(apiUrl + "/items")
             .then((response) => response.json())
             .then((items) => setItems(items));
     }
 
     const addTodo = (newTodoText) => {
-        fetch("http://localhost:3001/api/items", {
+        fetch(apiUrl + "/items", {
             method: "POST",
             body: JSON.stringify({content: newTodoText}),
             headers: {
@@ -32,7 +35,7 @@ function App() {
     const toggleCompletedItem = (itemId, itemCompleted) => {
         // POST to update item
         // update state of that item
-        fetch("http://localhost:3001/api/items/" + itemId.toString(), {
+        fetch(apiUrl + "/items/" + itemId.toString(), {
             method: "PATCH",
             body: JSON.stringify({completed: !itemCompleted}),
             headers: {
@@ -44,7 +47,7 @@ function App() {
 
     const deleteItem = (itemId) => {
         // Send DELETE request to back end.
-        fetch("http://localhost:3001/api/items/" + itemId.toString(), {
+        fetch(apiUrl + "/items/" + itemId.toString(), {
             method: "DELETE",
         })
             .then(response => loadItems());
@@ -52,7 +55,7 @@ function App() {
 
     const updateItemText = (itemId, itemText) => {
         // Send PATCH to back end with the updated itemText.
-        fetch("http://localhost:3001/api/items/" + itemId.toString(), {
+        fetch(apiUrl + "/items/" + itemId.toString(), {
             method: "PATCH",
             body: JSON.stringify({content: itemText}),
             headers: {

@@ -8,7 +8,37 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../fullstack-todo/client-full-stack-todo/README.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../fullstack-todo/client-full-stack-todo/src/App.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../fullstack-todo/server-full-stack-todo/src/main/java/com/swf/serverfullstacktodo/TodoController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../fullstack-todo/server-full-stack-todo/src/main/java/com/swf/serverfullstacktodo/TodoItem.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../fullstack-todo/server-full-stack-todo/src/test/java/com/swf/serverfullstacktodo/TodoControllerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../mock-gmail/src/App.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/README.md">
           <value>
             <set />
           </value>
@@ -19,6 +49,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/Item.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/ItemEditor.js">
           <value>
             <set />
           </value>
